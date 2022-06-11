@@ -17,7 +17,6 @@ def get_usuarios():
 
 @app.post("/users")
 def post_users():
-    print()
     return "gracias"
 
 
