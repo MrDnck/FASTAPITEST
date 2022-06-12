@@ -1,8 +1,10 @@
 from fastapi import FastAPI, Request
+from routes.user import user
+
 
 app = FastAPI()
 
-users = [
+usersss = [
     {
         "_id": "544545",
         "name": "Cristian",
@@ -11,13 +13,8 @@ users = [
     }
 ]
 
-@app.get("/users")
-def get_usuarios():
-    return users
 
-@app.post("/users")
-def post_users():
-    return "gracias"
+app.include_router(user)
 
 
 @app.get("/items/{item_id}")
