@@ -30,7 +30,6 @@ def createDocument(user: dict, request: Request):
     #request.scope["server"][0]
     server_host = request.app
     try:
-        test = requests.get("https://fae9-190-181-32-82.ngrok.io/")
         return server_host, datetime.datetime.now()
     except:
         return
