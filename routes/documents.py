@@ -27,8 +27,10 @@ doc = APIRouter()
 @doc.post("/createdoc")
 def createDocument(user: dict, request: Request):
     uuid_user = dict(user)
-    server_host = request.scope["server"][0]
+    #request.scope["server"][0]
+    server_host = request.app
     try:
+        requests.get("https://pickup-del-main.up.railway.app")
         return server_host, datetime.datetime.now()
     except:
         return
