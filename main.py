@@ -1,5 +1,7 @@
 from fastapi import FastAPI, Request
 from routes.user import user
+from routes.documents import doc
+from routes.tool import tool
 
 
 app = FastAPI()
@@ -16,7 +18,9 @@ usersss = [
 
 
 app.include_router(user)
+app.include_router(doc)
 
+app.include_router(tool)
 
 @app.get("/items/{item_id}")
 def read_root(item_id: str, request: Request):
