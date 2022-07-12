@@ -28,7 +28,7 @@ doc = APIRouter()
 def createDocument(user: dict, request: Request):
     uuid_user = dict(user)
     #request.scope["server"][0]
-    server_host = request.app
+    server_host = "adad"
     try:
         return server_host, datetime.datetime.now()
     except:
