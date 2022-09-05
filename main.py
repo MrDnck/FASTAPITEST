@@ -2,20 +2,11 @@ from fastapi import FastAPI, Request
 from routes.user import user
 from routes.documents import doc
 from routes.tool import tool
+from dotenv import  load_dotenv
 
+load_dotenv()
 
 app = FastAPI()
-
-
-usersss = [
-    {
-        "_id": "544545",
-        "name": "Cristian",
-        "correo": "dalamates@gmail.com",
-        "password": "cristian",
-    }
-]
-
 
 app.include_router(user)
 app.include_router(doc)

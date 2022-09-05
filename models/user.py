@@ -11,3 +11,7 @@ class USERCREATE(BaseModel):
     email: str
     password: str
     replypassword: str
+
+class USERCHECK(BaseModel):
+    email: str
+    password: str
